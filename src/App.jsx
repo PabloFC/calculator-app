@@ -14,10 +14,10 @@ function App() {
               <input type="range" name="" id="" />
             </div>
           </div>
-          <section id="inputSection">
+          <section className="inputSectionStyle">
             <input type="text" className="w-full h-20 text-right" />
           </section>
-          <section id="buttonsSection" className="p-4 grid grid-cols-4 gap-2">
+          <section className="buttonsSectionStyle p-4 grid grid-cols-4 gap-2">
             <button className="number">7</button>
             <button className="number">8</button>
             <button className="number">9</button>

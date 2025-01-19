@@ -2,23 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: hsl(222, 26%, 31%);
-}
-
-#inputSection,
-input {
-  background-color: hsl(224, 36%, 15%);
-  color: white;
-}
-
-#inputSection,
-#buttonsSection {
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-#buttonsSection {
-  background-color: hsl(223, 31%, 20%);
+@layer components {
+  body {
+    @apply bg-[hsl(222,26%,31%)];
+  }
+  .inputSectionStyle {
+    @apply bg-[hsl(224,36%,15%)] rounded-lg p-5 mt-5;
+  }
+  input {
+    @apply bg-[hsl(224,36%,15%)];
+  }
+  .buttonsSectionStyle {
+    @apply bg-[hsl(223,31%,20%)] rounded-lg p-5 mt-5;
+  }
 }
