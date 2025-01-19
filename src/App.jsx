@@ -4,20 +4,20 @@ function App() {
   return (
     <>
       <div className="h-screen flex items-center justify-center">
-        <section className="app max-w-[600px] w-full bg-orange-400">
-          <div className="bg-red-900 flex justify-between items-center p-4">
+        <section className="app max-w-[600px] w-full">
+          <div className="flex justify-between items-center p-4">
             <div>
-              <h1>cal</h1>
+              <h1 className="text-2xl text-white font-bold">calc</h1>
             </div>
             <div>
-              <p>Theme</p>
+              <p className="text-md text-white font-bold">THEME</p>
               <input type="range" name="" id="" />
             </div>
           </div>
-          <section>
+          <section id="inputSection">
             <input type="text" className="w-full h-20 text-right" />
           </section>
-          <section className="bg-blue-900 p-4 grid grid-cols-4 gap-2">
+          <section id="buttonsSection" className="p-4 grid grid-cols-4 gap-2">
             <button className="number">7</button>
             <button className="number">8</button>
             <button className="number">9</button>
