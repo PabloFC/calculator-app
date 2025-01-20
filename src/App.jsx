@@ -2,8 +2,8 @@ import "./App.css";
 
 function App() {
   return (
-    <>
-      <div className="h-screen flex items-center justify-center">
+    <main className="mt-6 mb-6 p-6">
+      <div className="h-screen flex items-center justify-center ">
         <section className="app max-w-[600px] w-full">
           <div className="flex justify-between items-center p-4">
             <div>
@@ -43,7 +43,7 @@ function App() {
           </section>
         </section>
       </div>
-    </>
+    </main>
   );
 }
 
