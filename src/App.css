@@ -3,16 +3,47 @@
 @tailwind utilities;
 
 @layer components {
+  :root {
+    --bgMain: hsl(222, 26%, 31%);
+    --bgToggle: hsl(223, 31%, 20%);
+    --bgScreen: hsl(224, 36%, 15%);
+    --keyResetDelete: hsl(225, 21%, 49%);
+    --keyResetDeleteShadow: hsl(224, 28%, 35%);
+    --keyToggleEqual: hsl(6, 63%, 50%);
+    --keyToggleEqualShadow: hsl(6, 70%, 34%);
+    --keyNumberOperator: hsl(30, 25%, 89%);
+    --keyNumberOperatorShadow: hsl(28, 16%, 65%);
+    --textNumber: hsl(221, 14%, 31%);
+    --white: hsl(0, 0%, 100%);
+  }
   body {
-    @apply bg-[hsl(222,26%,31%)];
+    @apply bg-[--bgMain];
   }
   .inputSectionStyle {
-    @apply bg-[hsl(224,36%,15%)] rounded-lg p-5 mt-5;
+    @apply bg-[--bgScreen] rounded-lg p-5 mt-5;
   }
   input {
-    @apply bg-[hsl(224,36%,15%)];
+    @apply bg-[--bgScreen];
   }
   .buttonsSectionStyle {
-    @apply bg-[hsl(223,31%,20%)] rounded-lg p-5 mt-5;
+    @apply bg-[--bgToggle] rounded-lg p-5 mt-5;
+  }
+  .buttonsSectionStyle button {
+    @apply rounded-lg;
+  }
+  .number,
+  .operator {
+    @apply bg-[--keyNumberOperator] text-[--textNumber] w-full py-2 text-[32px] p-5 tracking-[-0.02em] shadow-[0px_5px_0px_0px_var(--keyNumberOperatorShadow)];
+  }
+  .equal {
+    @apply bg-[--keyToggleEqual] shadow-[0px_5px_0px_0px_var(--keyToggleEqualShadow)] text-[32px];
+  }
+  .reset,
+  .delete {
+    @apply bg-[--keyResetDelete] text-[28px] text-white shadow-[0px_5px_0px_0px_var(--keyResetDeleteShadow)];
+  }
+  .reset,
+  .equal {
+    @apply col-span-2 text-white;
   }
 }

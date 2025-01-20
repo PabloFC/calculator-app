@@ -17,11 +17,11 @@ function App() {
           <section className="inputSectionStyle">
             <input type="text" className="w-full h-20 text-right" />
           </section>
-          <section className="buttonsSectionStyle p-4 grid grid-cols-4 gap-2">
+          <section className="buttonsSectionStyle p-8 grid grid-cols-4 grid-rows-5 gap-x-6 gap-y-7 ">
             <button className="number">7</button>
             <button className="number">8</button>
             <button className="number">9</button>
-            <button className="operator">DEL</button>
+            <button className="delete">DEL</button>
 
             <button className="number">4</button>
             <button className="number">5</button>
@@ -38,7 +38,7 @@ function App() {
             <button className="number">/</button>
             <button className="operator">*</button>
 
-            <button className="reset">Reset</button>
+            <button className="reset">RESET</button>
             <button className="equal">=</button>
           </section>
         </section>
