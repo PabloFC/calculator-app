@@ -28,7 +28,7 @@ body {
     @apply bg-[--bgScreen] rounded-lg p-5 mt-5;
   }
   input {
-    @apply bg-[--bgScreen];
+    @apply bg-inherit;
   }
   .buttonsSectionStyle {
     @apply bg-[--bgToggle] rounded-lg p-5 mt-5;

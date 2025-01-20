@@ -15,7 +15,10 @@ function App() {
             </div>
           </div>
           <section className="inputSectionStyle">
-            <input type="text" className="w-full h-20 text-right" />
+            <input
+              type="text"
+              className="w-full h-20 text-right focus:outline-none"
+            />
           </section>
           <section className="buttonsSectionStyle p-8 grid grid-cols-4 grid-rows-5 gap-x-6 gap-y-7 ">
             <button className="number">7</button>
