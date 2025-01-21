@@ -4,22 +4,33 @@ function App() {
   return (
     <main className="mt-6 mb-6 p-6">
       <div className="h-screen flex items-center justify-center ">
-        <section className="app max-w-[600px] w-full">
+        <section className="calculator max-w-[600px] w-full">
           <div className="flex justify-between items-center p-4">
             <div>
-              <h1 className="text-2xl text-white font-bold">calc</h1>
+              <span className="logoStyle">calc</span>
             </div>
-            <div>
-              <p className="text-md text-white font-bold">THEME</p>
-              <input type="range" name="" id="" />
+            <div className="themeToggleContainer">
+              <div className="themeNumbersContainer">
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+              </div>
+              <div className="themeContainer">
+                <p>theme</p>
+                <div className="themeOptions">
+                  <button className="themeButton" role="button"></button>
+                </div>
+              </div>
             </div>
           </div>
+
           <section className="inputSectionStyle">
             <input
               type="text"
               className="w-full h-20 text-right focus:outline-none"
             />
           </section>
+
           <section className="buttonsSectionStyle p-8 grid grid-cols-4 grid-rows-5 gap-x-6 gap-y-7 ">
             <button className="number">7</button>
             <button className="number">8</button>

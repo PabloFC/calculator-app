@@ -24,6 +24,30 @@ body {
   body {
     @apply bg-[--bgMain];
   }
+  .logoStyle {
+    @apply tracking-[-0.01em];
+  }
+  .themeToggleContainer {
+    @apply flex flex-col gap-1 items-end;
+  }
+  .themeNumbersContainer {
+    @apply flex gap-4 px-1.5;
+  }
+  .themeNumbers p {
+    @apply text-lg;
+  }
+  .themeContainer {
+    @apply flex gap-7 items-center;
+  }
+  .themeContainer p {
+    @apply text-xs tracking-wider uppercase;
+  }
+  .themeOptions {
+    @apply flex gap-1 p-1 w-[70px] rounded-[12px] bg-[--bgToggle] transition-[background] duration-300 ease-in-out;
+  }
+  .themeButton {
+    @apply w-[18px] h-[18px] rounded-full bg-[var(--keyToggleEqual)] transition-all duration-300 ease-in-out;
+  }
   .inputSectionStyle {
     @apply bg-[--bgScreen] rounded-lg p-5 mt-5;
   }
