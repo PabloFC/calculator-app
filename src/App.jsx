@@ -36,6 +36,7 @@ function App() {
               type="text"
               className="solution w-full h-20 text-right focus:outline-none"
               value={inputValue}
+              readOnly
             />
           </section>
 
