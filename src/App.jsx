@@ -1,6 +1,13 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleButtonsClick = (value) => {
+    setInputValue((prevValue) => prevValue + value);
+  };
+
   return (
     <main className="mt-6 mb-6 p-6">
       <div className="h-screen flex items-center justify-center ">
@@ -27,33 +34,79 @@ function App() {
           <section className="inputSectionStyle">
             <input
               type="text"
-              className="w-full h-20 text-right focus:outline-none"
+              className="solution w-full h-20 text-right focus:outline-none"
+              value={inputValue}
             />
           </section>
 
           <section className="buttonsSectionStyle p-8 grid grid-cols-4 grid-rows-5 gap-x-6 gap-y-7 ">
-            <button className="number">7</button>
-            <button className="number">8</button>
-            <button className="number">9</button>
-            <button className="delete">DEL</button>
+            <button className="number" onClick={() => handleButtonsClick("7")}>
+              7
+            </button>
+            <button className="number" onClick={() => handleButtonsClick("8")}>
+              8
+            </button>
+            <button className="number" onClick={() => handleButtonsClick("9")}>
+              9
+            </button>
+            <button className="delete" onClick={() => setInputValue("")}>
+              DEL
+            </button>
 
-            <button className="number">4</button>
-            <button className="number">5</button>
-            <button className="number">6</button>
-            <button className="operator">+</button>
+            <button className="number" onClick={() => handleButtonsClick("4")}>
+              4
+            </button>
+            <button className="number" onClick={() => handleButtonsClick("5")}>
+              5
+            </button>
+            <button className="number" onClick={() => handleButtonsClick("6")}>
+              6
+            </button>
+            <button
+              className="operator"
+              onClick={() => handleButtonsClick("+")}
+            >
+              +
+            </button>
 
-            <button className="number">1</button>
-            <button className="number">2</button>
-            <button className="number">3</button>
-            <button className="operator">-</button>
+            <button className="number" onClick={() => handleButtonsClick("1")}>
+              1
+            </button>
+            <button className="number" onClick={() => handleButtonsClick("2")}>
+              2
+            </button>
+            <button className="number" onClick={() => handleButtonsClick("3")}>
+              3
+            </button>
+            <button
+              className="operator"
+              onClick={() => handleButtonsClick("-")}
+            >
+              -
+            </button>
 
-            <button className="number">.</button>
-            <button className="number">0</button>
-            <button className="number">/</button>
-            <button className="operator">*</button>
+            <button className="number" onClick={() => handleButtonsClick(".")}>
+              .
+            </button>
+            <button className="number" onClick={() => handleButtonsClick("0")}>
+              0
+            </button>
+            <button className="number" onClick={() => handleButtonsClick("/")}>
+              /
+            </button>
+            <button
+              className="operator"
+              onClick={() => handleButtonsClick("*")}
+            >
+              *
+            </button>
 
-            <button className="reset">RESET</button>
-            <button className="equal">=</button>
+            <button className="reset" onClick={() => setInputValue("")}>
+              RESET
+            </button>
+            <button className="equal" onClick={() => handleButtonsClick("=")}>
+              =
+            </button>
           </section>
         </section>
       </div>

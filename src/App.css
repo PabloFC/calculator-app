@@ -22,7 +22,7 @@ body {
     --white: hsl(0, 0%, 100%);
   }
   body {
-    @apply bg-[--bgMain];
+    @apply bg-[--bgMain] text-white;
   }
   .logoStyle {
     @apply tracking-[-0.01em];
