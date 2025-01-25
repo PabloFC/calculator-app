@@ -5,7 +5,20 @@ function App() {
   const [inputValue, setInputValue] = useState("");
 
   const handleButtonsClick = (value) => {
-    setInputValue((prevValue) => prevValue + value);
+    if (value === "=") {
+      try {
+        const calculatedResult = eval(inputValue);
+        setInputValue(calculatedResult.toString());
+      } catch (error) {
+        setInputValue("Error" + error);
+      }
+    } else if (value === "DEL") {
+      setInputValue((prevValue) => prevValue.slice(0, -1));
+    } else if (value === "RESET") {
+      setInputValue("");
+    } else {
+      setInputValue((prevValue) => prevValue + value);
+    }
   };
 
   return (
@@ -50,7 +63,10 @@ function App() {
             <button className="number" onClick={() => handleButtonsClick("9")}>
               9
             </button>
-            <button className="delete" onClick={() => setInputValue("")}>
+            <button
+              className="delete"
+              onClick={() => handleButtonsClick("DEL")}
+            >
               DEL
             </button>
 
@@ -102,7 +118,10 @@ function App() {
               *
             </button>
 
-            <button className="reset" onClick={() => setInputValue("")}>
+            <button
+              className="reset"
+              onClick={() => handleButtonsClick("RESET")}
+            >
               RESET
             </button>
             <button className="equal" onClick={() => handleButtonsClick("=")}>
