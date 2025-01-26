@@ -1,16 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
+  const [currentTheme, setCurrentTheme] = useState("theme1");
+  const [translateX, setTranslateX] = useState("0px");
+
+  const themes = ["theme1", "theme2", "theme3"];
+  const translateXValues = ["0px", "22px", "40px"];
+
+  useEffect(() => {
+    document.documentElement.classList.add(currentTheme);
+  }, []);
+
+  const handleThemeChange = () => {
+    const currentIndex = themes.indexOf(currentTheme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    const nexTheme = themes[nextIndex];
+
+    document.documentElement.classList.remove(currentTheme);
+    document.documentElement.classList.add(nexTheme);
+    setCurrentTheme(nexTheme);
+
+    setTranslateX(translateXValues[nextIndex]);
+  };
 
   const handleButtonsClick = (value) => {
     if (value === "=") {
       try {
         const calculatedResult = eval(inputValue);
         setInputValue(calculatedResult.toString());
-      } catch (error) {
-        setInputValue("Error" + error);
+      } catch {
+        setInputValue("Error");
       }
     } else if (value === "DEL") {
       setInputValue((prevValue) => prevValue.slice(0, -1));
@@ -27,7 +48,7 @@ function App() {
         <section className="calculator max-w-[600px] w-full">
           <div className="flex justify-between items-center p-4">
             <div>
-              <span className="logoStyle">calc</span>
+              <span className="logoStyle ">calc</span>
             </div>
             <div className="themeToggleContainer">
               <div className="themeNumbersContainer">
@@ -38,7 +59,12 @@ function App() {
               <div className="themeContainer">
                 <p>theme</p>
                 <div className="themeOptions">
-                  <button className="themeButton" role="button"></button>
+                  <button
+                    className="themeButton"
+                    role="button"
+                    onClick={handleThemeChange}
+                    style={{ transform: `translateX(${translateX})` }}
+                  ></button>
                 </div>
               </div>
             </div>
@@ -47,7 +73,7 @@ function App() {
           <section className="inputSectionStyle">
             <input
               type="text"
-              className="solution w-full h-20 text-right focus:outline-none"
+              className="text-[32px] w-full h-20 text-right focus:outline-none"
               value={inputValue}
               readOnly
             />
