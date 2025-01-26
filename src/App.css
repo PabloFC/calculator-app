@@ -8,7 +8,7 @@ body {
 }
 
 @layer components {
-  :root {
+  .theme1 {
     --bgMain: hsl(222, 26%, 31%);
     --bgToggle: hsl(223, 31%, 20%);
     --bgScreen: hsl(224, 36%, 15%);
@@ -19,6 +19,32 @@ body {
     --keyNumberOperator: hsl(30, 25%, 89%);
     --keyNumberOperatorShadow: hsl(28, 16%, 65%);
     --textNumber: hsl(221, 14%, 31%);
+    --white: hsl(0, 0%, 100%);
+  }
+  .theme2 {
+    --bgMain: hsl(0, 0%, 90%);
+    --bgToggle: hsl(0, 5%, 81%);
+    --bgScreen: hsl(0, 0%, 93%);
+    --keyResetDelete: hsl(185, 42%, 37%);
+    --keyResetDeleteShadow: hsl(185, 58%, 25%);
+    --keyToggleEqual: hsl(25, 98%, 40%);
+    --keyToggleEqualShadow: hsl(25, 99%, 27%);
+    --keyNumberOperator: hsl(45, 7%, 89%);
+    --keyNumberOperatorShadow: hsl(35, 11%, 61%);
+    --textNumber: hsl(60, 10%, 19%);
+    --white: hsl(0, 0%, 100%);
+  }
+  .theme3 {
+    --bgMain: hsl(268, 75%, 9%);
+    --bgToggle: hsl(268, 71%, 12%);
+    --bgScreen: hsl(268, 71%, 12%);
+    --keyResetDelete: hsl(281, 89%, 26%);
+    --keyResetDeleteShadow: hsl(285, 91%, 52%);
+    --keyToggleEqual: hsl(176, 100%, 44%);
+    --keyToggleEqualShadow: hsl(177, 92%, 70%);
+    --keyNumberOperator: hsl(268, 47%, 21%);
+    --keyNumberOperatorShadow: hsl(290, 70%, 36%);
+    --textNumber: hsl(52, 100%, 62%);
     --white: hsl(0, 0%, 100%);
   }
   body {

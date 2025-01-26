@@ -7,19 +7,17 @@ function App() {
   const [translateX, setTranslateX] = useState("0px");
 
   const themes = ["theme1", "theme2", "theme3"];
-  const translateXValues = ["0px", "22px", "40px"];
+  const translateXValues = ["0px", "22px", "44px"];
 
   useEffect(() => {
-    document.documentElement.classList.add(currentTheme);
-  }, []);
+    document.body.classList.add(currentTheme);
+  }, [currentTheme]);
 
   const handleThemeChange = () => {
     const currentIndex = themes.indexOf(currentTheme);
     const nextIndex = (currentIndex + 1) % themes.length;
     const nexTheme = themes[nextIndex];
 
-    document.documentElement.classList.remove(currentTheme);
-    document.documentElement.classList.add(nexTheme);
     setCurrentTheme(nexTheme);
 
     setTranslateX(translateXValues[nextIndex]);
