@@ -19,7 +19,8 @@ body {
     --keyNumberOperator: hsl(30, 25%, 89%);
     --keyNumberOperatorShadow: hsl(28, 16%, 65%);
     --textNumber: hsl(221, 14%, 31%);
-    --white: hsl(0, 0%, 100%);
+    --textBody: hsl(0, 0%, 100%);
+    /* --white: hsl(0, 0%, 100%); */
   }
   .theme2 {
     --bgMain: hsl(0, 0%, 90%);
@@ -32,7 +33,8 @@ body {
     --keyNumberOperator: hsl(45, 7%, 89%);
     --keyNumberOperatorShadow: hsl(35, 11%, 61%);
     --textNumber: hsl(60, 10%, 19%);
-    --white: hsl(0, 0%, 100%);
+    --textBody: hsl(60, 10%, 19%);
+    /* --white: hsl(0, 0%, 100%); */
   }
   .theme3 {
     --bgMain: hsl(268, 75%, 9%);
@@ -45,10 +47,10 @@ body {
     --keyNumberOperator: hsl(268, 47%, 21%);
     --keyNumberOperatorShadow: hsl(290, 70%, 36%);
     --textNumber: hsl(52, 100%, 62%);
-    --white: hsl(0, 0%, 100%);
+    --textBody: hsl(52, 100%, 62%);
   }
   body {
-    @apply bg-[--bgMain] text-white;
+    @apply bg-[--bgMain] text-[--textBody];
   }
   .logoStyle {
     @apply tracking-[-0.01em] text-[32px];

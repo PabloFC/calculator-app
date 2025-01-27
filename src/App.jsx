@@ -18,8 +18,8 @@ function App() {
     const nextIndex = (currentIndex + 1) % themes.length;
     const nexTheme = themes[nextIndex];
 
+    document.body.className = nexTheme;
     setCurrentTheme(nexTheme);
-
     setTranslateX(translateXValues[nextIndex]);
   };
 
