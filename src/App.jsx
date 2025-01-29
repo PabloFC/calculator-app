@@ -77,7 +77,7 @@ function App() {
             />
           </section>
 
-          <section className="buttonsSectionStyle p-8 grid grid-cols-4 grid-rows-5 gap-x-6 gap-y-7 ">
+          <section className="buttonsSectionStyle p-8 grid grid-cols-4 grid-rows-5 gap-x-4 gap-y-6 ">
             <button className="number" onClick={() => handleButtonsClick("7")}>
               7
             </button>
