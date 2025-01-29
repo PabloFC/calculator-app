@@ -26,6 +26,10 @@ function App() {
   const handleButtonsClick = (value) => {
     if (value === "=") {
       try {
+        if (inputValue.includes("/0")) {
+          setInputValue("Can't divide by 0");
+          return;
+        }
         const calculatedResult = eval(inputValue);
         setInputValue(calculatedResult.toString());
       } catch {
