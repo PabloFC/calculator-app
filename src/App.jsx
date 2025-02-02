@@ -6,6 +6,7 @@ function App() {
   const [currentTheme, setCurrentTheme] = useState("theme1");
   const [translateX, setTranslateX] = useState("0px");
 
+  const maxInputNumbers = 15;
   const themes = ["theme1", "theme2", "theme3"];
   const translateXValues = ["0px", "22px", "44px"];
 
@@ -40,7 +41,14 @@ function App() {
     } else if (value === "RESET") {
       setInputValue("");
     } else {
-      setInputValue((prevValue) => prevValue + value);
+      setInputValue((prevValue) => {
+        const numberCount = prevValue.replace(/[^0-9]/g, "").length;
+
+        if (value.match(/[0-9]/) && numberCount >= maxInputNumbers) {
+          return prevValue;
+        }
+        return prevValue + value;
+      });
     }
   };
 
