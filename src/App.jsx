@@ -1,29 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CalculatorButtons from "./components/CalculatorButtons";
+import { useTheme } from "./hooks/useTheme";
 import "./App.css";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
-  const [currentTheme, setCurrentTheme] = useState("theme1");
-  const [translateX, setTranslateX] = useState("0px");
+  const { translateX, handleThemeChange } = useTheme();
 
   const maxInputNumbers = 15;
-  const themes = ["theme1", "theme2", "theme3"];
-  const translateXValues = ["0px", "22px", "44px"];
-
-  useEffect(() => {
-    document.body.classList.add(currentTheme);
-  }, [currentTheme]);
-
-  const handleThemeChange = () => {
-    const currentIndex = themes.indexOf(currentTheme);
-    const nextIndex = (currentIndex + 1) % themes.length;
-    const nexTheme = themes[nextIndex];
-
-    document.body.className = nexTheme;
-    setCurrentTheme(nexTheme);
-    setTranslateX(translateXValues[nextIndex]);
-  };
 
   const handleButtonsClick = (value) => {
     if (value === "=") {
