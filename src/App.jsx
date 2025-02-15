@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CalculatorButtons from "./components/CalculatorButtons";
 import "./App.css";
 
 function App() {
@@ -88,82 +89,7 @@ function App() {
               readOnly
             />
           </section>
-
-          <section className="buttonsSectionStyle p-8 grid grid-cols-4 grid-rows-5 gap-x-4 gap-y-6 ">
-            <button className="number" onClick={() => handleButtonsClick("7")}>
-              7
-            </button>
-            <button className="number" onClick={() => handleButtonsClick("8")}>
-              8
-            </button>
-            <button className="number" onClick={() => handleButtonsClick("9")}>
-              9
-            </button>
-            <button
-              className="delete"
-              onClick={() => handleButtonsClick("DEL")}
-            >
-              DEL
-            </button>
-
-            <button className="number" onClick={() => handleButtonsClick("4")}>
-              4
-            </button>
-            <button className="number" onClick={() => handleButtonsClick("5")}>
-              5
-            </button>
-            <button className="number" onClick={() => handleButtonsClick("6")}>
-              6
-            </button>
-            <button
-              className="operator"
-              onClick={() => handleButtonsClick("+")}
-            >
-              +
-            </button>
-
-            <button className="number" onClick={() => handleButtonsClick("1")}>
-              1
-            </button>
-            <button className="number" onClick={() => handleButtonsClick("2")}>
-              2
-            </button>
-            <button className="number" onClick={() => handleButtonsClick("3")}>
-              3
-            </button>
-            <button
-              className="operator"
-              onClick={() => handleButtonsClick("-")}
-            >
-              -
-            </button>
-
-            <button className="number" onClick={() => handleButtonsClick(".")}>
-              .
-            </button>
-            <button className="number" onClick={() => handleButtonsClick("0")}>
-              0
-            </button>
-            <button className="number" onClick={() => handleButtonsClick("/")}>
-              /
-            </button>
-            <button
-              className="operator"
-              onClick={() => handleButtonsClick("*")}
-            >
-              *
-            </button>
-
-            <button
-              className="reset"
-              onClick={() => handleButtonsClick("RESET")}
-            >
-              RESET
-            </button>
-            <button className="equal" onClick={() => handleButtonsClick("=")}>
-              =
-            </button>
-          </section>
+          <CalculatorButtons handleButtonsClick={handleButtonsClick} />
         </section>
       </div>
     </main>
