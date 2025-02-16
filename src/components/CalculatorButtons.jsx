@@ -26,7 +26,7 @@ const CalculatorButtons = ({ handleButtonsClick }) => {
   );
 
   return (
-    <section className="buttonsSectionStyle p-8 grid grid-cols-4 grid-rows-5 gap-x-4 gap-y-6">
+    <section className="buttonsSectionStyle p-4 sm:p-8 grid grid-cols-4 grid-rows-5 gap-x-4 gap-y-6">
       {buttons.map((button) => (
         <button
           key={button.value}
