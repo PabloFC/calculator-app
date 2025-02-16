@@ -27,6 +27,11 @@ export const useCalculator = (maxInputNumbers) => {
         if (value.match(/[0-9]/) && numberCount >= maxInputNumbers) {
           return prevValue;
         }
+
+        const lastChar = prevValue.slice(-1);
+        if (value.match(/[+\-*/]/) && lastChar.match(/[+\-*/]/)) {
+          return prevValue;
+        }
         return prevValue + value;
       });
     }
