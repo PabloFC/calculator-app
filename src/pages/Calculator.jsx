@@ -9,7 +9,7 @@ const Calculator = () => {
   return (
     <main className="mt-6 mb-6 p-6">
       <div className="h-screen flex items-center justify-center ">
-        <section className="max-w-[600px] w-full">
+        <div className="max-w-[600px] w-full">
           <header className="flex justify-between items-center p-4">
             <div>
               <span className="logoStyle ">calc</span>
@@ -42,7 +42,7 @@ const Calculator = () => {
             />
           </section>
           <CalculatorButtons handleButtonsClick={handleButtonsClick} />
-        </section>
+        </div>
       </div>
     </main>
   );
